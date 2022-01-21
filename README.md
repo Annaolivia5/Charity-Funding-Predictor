@@ -43,7 +43,8 @@ The following step were taken to improve the model's performance:
 * Data was binned into an "other category" for two of the variables: APPLICATION_TYPE and CLASSIFICATION. These 2 variable had many categories, and some categories represented such a small amount of the data that is was optimal to combine them into an "other" category. This reduced the number of features in the dummy data significantly. After the first attempt with binning, on the second attempt, the bins were made to include even more categories and further reduce the number of features. 
 * The first attempt at improvement involved increasing the number of neurons in each layer, as a trial and error approach. This made little no change in the accuracy score. From 0.7284 to 0.7238 was a slight decline in accuracy. 
 
-![defining NN](Images/1st_try.png)
+![defining neural network](Images/1st_try.png "nn")
+
 
 * The second attempt involved also adding a 3rd hidden layer. There are many features in the data, so it's unlikely that only the 2 hidden layers of the first attempts would create an accurate model. The accuracy score was then 0.7257. This still is was not an improvement from the first attempt though. 
 * In the fourth attempt outliers were identified in the ASK_AMT feature, and those rows were removed from the processed data. This significanlty improved the accuracy score, which was then up to 0.7498.
