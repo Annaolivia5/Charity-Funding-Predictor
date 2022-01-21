@@ -26,7 +26,7 @@ The Neural network is trained on a CSV containing over 34,000 organizations fund
         * **SPECIAL_CONSIDERATIONS**—Special consideration for application
         * **ASK_AMT**—Funding amount requested
 
-    * In the 5th attempt, **SPECIAL_CONSIDERATIONS** (Special consideration for application) was removed.
+    * In the 5th attempt, **SPECIAL_CONSIDERATIONS** was removed.
 
 * Variables removed from the input data
     * **EIN** and **NAME**—Identification columns
