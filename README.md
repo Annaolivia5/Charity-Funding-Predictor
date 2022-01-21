@@ -33,7 +33,7 @@ The Neural network is trained on a CSV containing over 34,000 organizations fund
 
 
         
-# Compiling, Training, and Evaluating the Model
+####  Compiling, Training, and Evaluating the Model
 
 The final Neural network that was most optimized had 3 layers. The input layer had as many neurons as there were features in the processed/dummy data. The second layer had 1/2 as many as the input layer, and the third layer had 1/3 as many as the input layer. The relu activation function was used for all the layers except the output layer which used sigmoid.
 
