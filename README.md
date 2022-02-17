@@ -1,20 +1,18 @@
-# Deep Learning Homework: Charity Funding Predictor
-# Overview:
-In this project, a binary classifier neural network is developed. The neural network that is intended to predict whether or not organizations that apply for funding from Alphabet Soup will be successful. 
+# Deep Learning: Charity Funding Predictor
 
-The Neural network is trained on a CSV containing over 34,000 organizations funded byAlphabet Soup over the years.
+In this project, a binary classifier neural network is developed. The neural network  is intended to predict whether or not organizations that apply for funding from Alphabet Soup will be successful. 
 
-5 different neural network were compiled and trained. throughput the project, steps taken to optimize the neural network's performance and attempt at improving the accuracy score, in both the data processing and training stages. 
+The Neural network is trained on a CSV containing over 34,000 organizations funded by Alphabet Soup over the years.
+
+5 different neural network were compiled and trained. Throughput the project, steps were taken to optimize the neural network's performance and accuracy score, in both the data processing and training stages. 
 
 
 
-# Results:
-
-### Data Preprocessing
+### Preprocessing Stage:
 
 * Target variable: IS_SUCCESSFUL — Was the money used effectively
   
-* Features:
+* Features used in training the model:
     * In the first 4 attempts:
         * **APPLICATION_TYPE**—Alphabet Soup application type
         * **AFFILIATION**—Affiliated sector of industry
@@ -28,12 +26,12 @@ The Neural network is trained on a CSV containing over 34,000 organizations fund
 
     * In the 5th attempt, **SPECIAL_CONSIDERATIONS** was removed.
 
-* Variables removed from the input data
+* Variables removed from the input data:
     * **EIN** and **NAME**—Identification columns
 
 
         
-###  Compiling, Training, and Evaluating the Model
+###  Compiling, Training, and Evaluating the Model:
 
 The final Neural network that was most optimized had 3 layers. The input layer had as many neurons as there were features in the processed/dummy data. The second layer had 1/2 as many as the input layer, and the third layer had 1/3 as many as the input layer. The relu activation function was used for all the layers except the output layer which used sigmoid.
 
@@ -47,15 +45,15 @@ The following step were taken to improve the model's performance:
 ![defining neural network](Images/1st_try.png "nn")
 
 
-* During the third attempt, a 3rd hidden layer was added. There are many features in the data, so it's unlikely that only the 2 hidden layers of the first attempts would create an accurate model. The accuracy score was then 0.7257. This still is was not an improvement from the first attempt though. 
+* During the third attempt, a 3rd hidden layer was added. There are many features in the data, so it's unlikely that only the 2 hidden layers in the first attempts would create an accurate model. The accuracy score in thre third attempt was 0.7257. This still was not an improvement from the first attempt though. 
 
 ![defining neural network again](Images/2nd_try.png "nn 2")
 
-* In the fourth attempt outliers were identified in the ASK_AMT feature, and those rows were removed from the processed data. This significanlty improved the accuracy score, which was then up to 0.7498.
+* In the fourth attempt, outliers were identified in the ASK_AMT feature, and those rows were removed from the processed data. This significanlty improved the accuracy score, which went up to 0.7498.
 
 ![dropping outliers](Images/3rd_outliers.png "outliers dropped")
 
-* For the final attempt, the SPECIAL_CONSIDERATIONS feature was removed from the data, because it may have been creating noise. Special considerations is a vague description, and there could be many factors that influence whether or not certain types of special considerations positively or negatively affect an organization's success. The accuracy score was able to just barely reach the target goal of 0.7503. 
+* For the final attempt, the SPECIAL_CONSIDERATIONS feature was removed from the data, because it may have been creating noise. It may be that special considerations is wide-ranging, and there could be many factors that influence whether or not certain types of special considerations positively or negatively affect an organization's success. The accuracy score from this attempt was 0.7503. 
 
 ![noise reduction](Images/4th_dropping_col.png "noise reduction")
 
